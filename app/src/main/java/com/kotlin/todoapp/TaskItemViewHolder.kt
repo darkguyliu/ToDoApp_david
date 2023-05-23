@@ -28,9 +28,9 @@ class TaskItemViewHolder(
         binding.taskCellContainer.setOnClickListener{
             clickListener.editTaskItem(taskItem)
         }
-        if(taskItem.dueTime != null)
+        if(taskItem.dueTime() != null)
         {
-            binding.dueTime.text = timeFormat.format(taskItem.dueTime)
+            binding.dueTime.text = timeFormat.format(taskItem.dueTime())
         }
         else
         {
